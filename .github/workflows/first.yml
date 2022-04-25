@@ -13,7 +13,7 @@ jobs:
     runs-on: windows-2022
     steps:
     - name: Step one
-      run: "date /T"
+      run: "date"
   job3:
     name: Third job
     runs-on: macos-latest
