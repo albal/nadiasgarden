@@ -15,13 +15,13 @@ jobs:
     - name: Step one
       run: "date /T"
   job3:
-    name: Second job
+    name: Third job
     runs-on: macos-latest
     steps:
     - name: Step one
-      run: "date /T"
+      run: "date"
   job4:
-    name: Second job
+    name: Fourth job
     needs: [job1, job2, job3]
     runs-on: ubuntu-latest
     steps:
