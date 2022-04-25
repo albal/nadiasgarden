@@ -1,29 +1,18 @@
 ---
-name: first
+name: Build Dockerfile
 on: [push]
 jobs:
   job1:
-    name: First job
+    name: Build Dockerfile
     runs-on: ubuntu-latest
     steps:
-    - name: Step one
-      run: "date"
+    - name: Build Image
+      run: "docker build ."
+      
   job2:
-    name: Second job
-    runs-on: windows-2022
-    steps:
-    - name: Step one
-      run: "date"
-  job3:
-    name: Third job
-    runs-on: macos-latest
-    steps:
-    - name: Step one
-      run: "date"
-  job4:
-    name: Fourth job
-    needs: [job1, job2, job3]
+    name: Test Docker Image
     runs-on: ubuntu-latest
     steps:
-    - name: Step one
-      run: "date"
+    - name: Hello
+      run: echo "Hello world!"
+  
