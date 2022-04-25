@@ -22,7 +22,7 @@ jobs:
       run: "date /T"
   job4:
     name: Second job
-    needs: [job1 job2 job3]
+    needs: [job1, job2, job3]
     runs-on: ubuntu-latest
     steps:
     - name: Step one
