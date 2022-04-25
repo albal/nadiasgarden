@@ -9,7 +9,7 @@ jobs:
     - name: Checkout code
       use: action/checkout@v2
     - name: Show files
-      run: ls -lart .
+      run: "ls -lart ."
     - name: Build Image
       run: "docker build ."
       
